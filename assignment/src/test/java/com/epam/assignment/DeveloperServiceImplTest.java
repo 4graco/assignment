@@ -95,7 +95,6 @@ public class DeveloperServiceImplTest extends AbstractModule {
 		when(database.getAllJobs()).thenReturn(testList);
 		DeveloperService developerService = Guice.createInjector(this)
 				.getInstance(DeveloperService.class);
-		// because assignedList is empty for all items
 		assertThat(developerService.getDeveloperTasks().size(), is(4));
 	}
 	
